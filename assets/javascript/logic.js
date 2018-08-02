@@ -9,7 +9,12 @@ var startGame = function (){
     //clears crystals upon restarting a game
     $(".crystals").empty();
 
-    var preciousRocks = [" ", " ", " ", " "];
+    var preciousRocks = [
+        "https://www.stevenaitchison.co.uk/wp-content/uploads/Healing-Crystals.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6wTKLqGlq2QtXM31-qn2f7EkMYrqRi0UrnjRetDyHX2zczkN4",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Natroliteinde1.jpg/250px-Natroliteinde1.jpg",
+        "https://rickfancy.com/shop_seopic/33646/3302/3302.jpg?time=1527497265"
+    ];
 
     //computer generates an arbitrary target number at start of game
     randomNum = Math.floor(Math.random() * 100) + 19;
@@ -27,6 +32,11 @@ var startGame = function (){
             rock.attr({
                 "class": 'rock',
                 "data-secret": hiddenValue
+            });
+
+            rock.css({
+                "background-image":"url('" + preciousRocks[i] + "')",
+                "background-size":"cover"
             });
 
         $(".crystals").append(rock);
