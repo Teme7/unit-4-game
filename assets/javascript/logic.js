@@ -5,12 +5,21 @@ var losses = 0;
 var oldValue = 0;
 
 var startGame = function (){
+
+    //clears crystals upon restarting a game
+    $(".crystals").empty();
+
+
+
+    //computer generates an arbitrary target number at start of game
     randomNum = Math.floor(Math.random() * 100) + 19;
+
     // console.log(randomNum);
 
-    $("#tally").html('randomNum: ' + randomNum);
+    $("#targetNum").html('randomNum: ' + randomNum);
     for(var i = 0; i < 4; i++){
 
+        //random num generation for crystals
         var hiddenValue = Math.floor(Math.random() * 10) + 1;
         // console.log(hiddenValue);
 
@@ -24,10 +33,14 @@ var startGame = function (){
 
     }
 
+    $("#oldValue").html("Player Score: " + oldValue);
+
+
 };
 
+startGame();
 
-$(".rock").on('click', function() {
+$(document).on('click', ".rock", function() {
 
     // parsing num into integer
     var num = parseInt($(this).attr('data-secret'));
@@ -36,6 +49,8 @@ $(".rock").on('click', function() {
 
     // tallying the hidden value of crystal clicked to players' current amount
     oldValue += num;
+
+    $("#oldValue").html("Player Score: " + oldValue);
 
     console.log(oldValue);
     // conditional logic checking on player's success
@@ -46,7 +61,13 @@ $(".rock").on('click', function() {
         losses++;
 
         //diplay the updated loss column
-        $("#losses").html(losses);
+        $("#losses").html("Oops! You lost: " + losses);
+
+        //clears tally after a loss
+        oldValue = 0;
+
+        //resets random number and hiddenValues of crystals
+        startGame();
 
     } else if(oldValue === randomNum){
         // console.log("Lucky you!!")
@@ -55,7 +76,16 @@ $(".rock").on('click', function() {
         wins++;
 
         //display the updated # of wins
-        $("#wins").html(wins);
+        $("#wins").html("Lucky you!! You won: " + wins);
+
+        //clears tally after winning
+        oldValue = 0;
+        
+        $("#oldValue").html(oldValue);
+
+        //resets random number and hiddenValues of crystals
+        startGame();
+
     };
 
 });
