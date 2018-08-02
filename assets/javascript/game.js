@@ -1,28 +1,51 @@
+//global vars
 var randomNum;
-var lose;
-var win;
+var wins = 0;
+var losses = 0;
+var oldValue = 0;
 
-//random number generator
-randomNum = Math.floor(Math.random() * 101) + 19;
+var restart = function() {
+    $(".crystals").empty();
 
-for(var i=0; i<4; i++){
-    //random number generation
-    var random = Math.floor(Math.random() * 11) + 1;
-    // console.log(random);
-
-    var crystal = $("<div>");
-    crystal.attr({
-        "class": 'crystal',
-        "arbitrary": random
-    })
-
-    $(".crystals").append(crystal);
+    //crystal images
 }
 
-$(".crystal").on('click', function(){
+//random number generator---since both max and min are included, ((max-min) + 1) + min is used here
+randomNum = Math.floor(Math.random() * 102) + 19;
+
+for(var i = 0; i < 4; i++){
+    //random number generation
+    // var random = Math.floor(Math.random() * 12) + 1;
+    // console.log(random);
+
+    var rock = $("<div>");
+        rock.attr("class", 'rock');
+    //     rock.attr({
+    //     // "class": "rock",
+    //     // "arbitrary": random
+    // })
+
+    $(".crystals").append(rock);
+};
+
+$(".rock").on('click', function(){
     // console.log($(this));
 
-    //to add the value of crystal to previous tally
+    //value of each crystal
+    var value = parseInt($(this).attr('arbitrary'));
 
-    var num = parseInt($(this).attr('arbitrary'));
+    //to add the value of crystal to previous tally
+    oldValue += value;
+
+    if(oldValue === randomNum){
+        // console.log("Congrats on winning the bet!!");
+        wins++;
+
+        $("success").html("wins");
+    } else if (oldValue > randomNum) {
+        // console.log("Oops, you guessed wrong!");
+        losses++;
+        $("failure").html("losses");
+    };
+
 });
