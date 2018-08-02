@@ -9,7 +9,7 @@ var startGame = function (){
     //clears crystals upon restarting a game
     $(".crystals").empty();
 
-
+    var preciousRocks = [" ", " ", " ", " "];
 
     //computer generates an arbitrary target number at start of game
     randomNum = Math.floor(Math.random() * 100) + 19;
