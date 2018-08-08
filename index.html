@@ -3,12 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <title>Crystal Collector Game</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         
+        <h1 class="game">Crystal Collector Game</h1>
+
+        <div class="instruction">
+            <h3>You will be given a random number at the start of the game.</h3>
+            <h3>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</h3>
+            <h3>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</h3>
+            <h3>The value of each crystal is hidden from you until you click on it.</h3>
+            <h3>Each time when the game starts, the game will change the values of each crystal.</h3>
+        </div>
 
         <div class="crystals"></div>
 
@@ -17,8 +26,7 @@
         <p id="losses"></p>
         <p id="oldValue"></p>
 
-        <!--<p id="wins"></p>
-        <p id="losses"></p> -->
+        <!-- <img class="backgroundImage" src="assets/images/Healing-Crystals1.jpg"> -->
 
         <!-- Here's how the game works:
  
