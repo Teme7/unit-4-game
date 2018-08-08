@@ -1,11 +1,20 @@
 body {
     /* background-image: url("https://www.stevenaitchison.co.uk/wp-content/uploads/Healing-Crystals.jpg"); */
-    background-image: url(https://i.ytimg.com/vi/hD1Byw-pzJ8/maxresdefault.jpg);
+    /* background-image: url(https://i.ytimg.com/vi/hD1Byw-pzJ8/maxresdefault.jpg); */
     /* background-image: url(data:image/jpeg;*/
     background-color: aqua;
     background-repeat: no-repeat;
     background-position: center; 
     background-size: 1280px 930px;
+}
+
+.crystals {
+    overflow: auto;
+}
+  
+.crystals div {
+    float: left;
+    width: 600px;
 }
 
 .game {
@@ -24,8 +33,8 @@ body {
     background-position: center;  */
     width: 600px;
     height: 300px;
-    padding: 4px;
-    margin-bottom: 10px;
+    /* padding: 4px; */
+    /* margin-bottom: 10px; */
     color: green;
     background-color: bisque
     /* opacity: 0.5; */
@@ -36,16 +45,18 @@ img {
     background-repeat: no-repeat;
     background-position: center; 
     background-size: 1280px 930px;
+    float: left;
 }
 
 .crystals {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 100px;
-    margin-left: 130px;
-    margin-right: 130px;
-    padding: 100px, 100px, 100px, 100px; 
+    align-items: left;
+    margin-top: 20px;
+    /* margin-left: 130px;
+    margin-right: 130px; */
+    /* padding: 100px, 100px, 100px, 100px;  */
+    width: 800px;
 }
 
 .rock {
@@ -62,6 +73,32 @@ img {
     box-shadow: 10px 10px 10px rgba(0,0,0,5);
     cursor: pointer;
     transition: box-shadow 1s;
+}
+
+#targetNum {
+    background-image: url("https://www.stevenaitchison.co.uk/wp-content/uploads/Healing-Crystals.jpg");
+    width: 210px;
+    height: 100px;
+    padding: 4px;
+    margin-top: 20px;
+    color: ghostwhite;
+    background-color: darkcyan;
+}
+
+#wins {
+    width: 210px;
+    height: 100px;
+    padding: 4px;
+    color: ghostwhite;
+    background-color: greenyellow;
+}
+
+#losses {
+    width: 210px;
+    height: 100px;
+    padding: 4px;
+    color: ghostwhite;
+    background-color: red;
 }
 
 img {

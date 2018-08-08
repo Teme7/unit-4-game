@@ -10,11 +10,11 @@ var startGame = function (){
     $(".crystals").empty();
 
     var preciousRocks = [
-        "https://www.stevenaitchison.co.uk/wp-content/uploads/Healing-Crystals.jpg",
+        "assets/images/Precious.jpg",
+        "assets/images/Amethystemadagascar2.jpg",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6wTKLqGlq2QtXM31-qn2f7EkMYrqRi0UrnjRetDyHX2zczkN4",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Natroliteinde1.jpg/250px-Natroliteinde1.jpg",
-        // "https://rickfancy.com/shop_seopic/33646/3302/3302.jpg?time=1527497265"
-        "assets/images/Q664-.jpg"
+        // "assets/images/Q664-.jpg"
+        "https://www.hamiltonjewelers.com/blog/wp-content/uploads/2011/10/Centenary-Diamond.jpg"
     ];
 
     //computer generates an arbitrary target number at start of game
@@ -22,7 +22,7 @@ var startGame = function (){
 
     // console.log(randomNum);
 
-    $("#targetNum").html('randomNum: ' + randomNum);
+    $("#targetNum").html(randomNum);
 
     for(var i = 0; i < 4; i++){
 
