@@ -11,10 +11,9 @@ var startGame = function (){
 
     var preciousRocks = [
         "assets/images/Precious.jpg",
-        "assets/images/Amethystemadagascar2.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6wTKLqGlq2QtXM31-qn2f7EkMYrqRi0UrnjRetDyHX2zczkN4",
-        // "assets/images/Q664-.jpg"
-        "https://www.hamiltonjewelers.com/blog/wp-content/uploads/2011/10/Centenary-Diamond.jpg"
+        "assets/images/Q664-.jpg",
+        "assets/images/treasure1.jpg",
+        "assets/images/centenary-diamond1.jpg",
     ];
 
     //computer generates an arbitrary target number at start of game
@@ -73,7 +72,7 @@ $(document).on('click', ".rock", function() {
         losses++;
 
         //diplay the updated loss column
-        $("#losses").html("Oops! You lost: " + losses);
+        $("#losses").html("Losses: " + losses);
 
         //clears tally after a loss
         oldValue = 0;
@@ -88,7 +87,7 @@ $(document).on('click', ".rock", function() {
         wins++;
 
         //display the updated # of wins
-        $("#wins").html("Lucky you!! You won: " + wins);
+        $("#wins").html("Wins: " + wins);
 
         //clears tally after winning
         oldValue = 0;
