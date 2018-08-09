@@ -1,7 +1,5 @@
 body {
-    /* background-image: url("https://www.stevenaitchison.co.uk/wp-content/uploads/Healing-Crystals.jpg"); */
     background-image: url(https://i.ytimg.com/vi/hD1Byw-pzJ8/maxresdefault.jpg);
-    /* background-image: url(data:image/jpeg;*/
     background-color: aqua;
     background-repeat: no-repeat;
     background-position: center; 
@@ -14,7 +12,6 @@ body {
   
 .board div {
     float: left;
-    /* width: 600px; */
 }
 
 .game {
@@ -24,7 +21,6 @@ body {
     margin-bottom: 10px;
     font-size: 40px;
     color: gold;
-    /* background-color: black; */
 }
 
 .instruction {
@@ -32,13 +28,14 @@ body {
     /* background-image: url(https://png.pngtree.com/element_origin_min_pic/16/06/29/16577384653440e.jpg); */
     /* background-repeat: no-repeat;
     background-position: center;  */
+    /* background-image: url("https://www.stevenaitchison.co.uk/wp-content/uploads/Healing-Crystals.jpg"); */
+    background-color: aqua;
     width: 600px;
-    height: 250px;
-    /* padding: 4px; */
+    height: 280px;
+    padding: 10px;
     /* margin-bottom: 10px; */
-    color: green;
-    background-color: bisque
-    /* opacity: 0.5; */
+    color:black;
+    /* background-color: bisque */
 }
 
 img {
@@ -55,9 +52,6 @@ img {
     align-items: left;
     margin-top: 20px;
     margin-bottom: 20px;
-    /* margin-left: 130px;
-    margin-right: 130px; */
-    /* padding: 100px, 100px, 100px, 100px;  */
     width: 950px;
 }
 
@@ -84,10 +78,8 @@ img {
     height: 100px;
     padding: 4px;
     margin-top: 20px;
-    /* margin-left: 375px; */
     color: ghostwhite;
     background-color: darkcyan;
-    
 }
 
 #scoreSheet {
@@ -97,10 +89,8 @@ img {
     height: 100px;
     padding: 4px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 25px;
     color: ghostwhite;
-    /* background-color: red; */
-    /* overflow: auto; */
 }
 
 #oldValue {
@@ -110,7 +100,7 @@ img {
     height: 100px;
     padding: 4px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 25px;
     color: black;
 }
 
