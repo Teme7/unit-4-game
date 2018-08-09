@@ -24,18 +24,11 @@ body {
 }
 
 .instruction {
-    /* background-image: url(https://www.stevenaitchison.co.uk/wp-content/uploads/Healing-Crystals.jpg); */
-    /* background-image: url(https://png.pngtree.com/element_origin_min_pic/16/06/29/16577384653440e.jpg); */
-    /* background-repeat: no-repeat;
-    background-position: center;  */
-    /* background-image: url("https://www.stevenaitchison.co.uk/wp-content/uploads/Healing-Crystals.jpg"); */
     background-color: aqua;
     width: 600px;
     height: 280px;
     padding: 10px;
-    /* margin-bottom: 10px; */
     color:black;
-    /* background-color: bisque */
 }
 
 img {

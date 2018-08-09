@@ -16,7 +16,7 @@ var startGame = function (){
         "assets/images/centenary-diamond1.jpg",
     ];
 
-    //computer generates an arbitrary target number at start of game
+    //computer generates an arbitrary (target) number at start of game
     randomNum = Math.floor(Math.random() * 100) + 19;
 
     // console.log(randomNum);
@@ -41,11 +41,9 @@ var startGame = function (){
             });
 
         $(".crystals").append(rock);
-
     }
 
     $("#oldValue").html("Player Score: " + oldValue);
-
 
 };
 
@@ -96,9 +94,7 @@ $(document).on('click', ".rock", function() {
 
         //resets random number and hiddenValues of crystals
         startGame();
-
     };
-
 });
 
 
